@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+    <ckeditor
+        (ready)="onReady($event)"
+        [config]="{plugins: FileRepository}"
+        [editor]="Editor"
+        formControlName="data">
+    </ckeditor>
+</form>
+
+<span>{{ form.value | json }}</span>
